@@ -1,0 +1,34 @@
+body {
+  background-color: #ddd;
+}
+
+#box1 {
+  color: #ff0;
+  background-color: rgba(134, 134, 90, 0.219);
+  width: 100px;
+}
+
+#box2 {
+  color: #f00;
+  background-color: rgba(134, 134, 90, 0.219);
+  width: 100px;
+}
+
+#box3 {
+  color: #ff0;
+  background-color: rgba(134, 134, 90, 0.219);
+  width: 300px;
+}
+
+#box4 {
+  color: #f00;
+  background-color: rgba(134, 134, 90, 0.219);
+  width: 300px;
+}
+
+#box5 {
+  color: #00ff00;
+  background-color: rgba(134, 134, 90, 0.219);
+  width: 500px;
+}
+/*# sourceMappingURL=vars.css.map */
