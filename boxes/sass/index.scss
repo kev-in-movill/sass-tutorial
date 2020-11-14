@@ -1,0 +1,58 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
+// sass compiler 는 _ 시작하는 파일은 컴파일 하지 않음
+
+// Nesting
+.box {
+  @include width-height-padding(300px, 300px, 20px);
+  @include pos-abs-center();
+  //   @include pos-abs-center-horizontal();
+  //   @include pos-abs-center-vertical();
+
+  // &: 상위요소
+  &,
+  &-inner {
+    border: 3px solid $border-color;
+  }
+
+  // 기본 구간보다 아래에 정의되어야 함
+  @include mq("phone") {
+    width: 100%;
+    border: none;
+  }
+
+  @include mq("tablet-land") {
+    border: 2px solid $border-color;
+  }
+
+  @include mq("desktop-big") {
+    border: 10px solid $border-color;
+  }
+
+  // .box = &
+  &-inner {
+    @include width-height-padding(initial, 40px, 10px);
+
+    background-color: #ccc;
+
+    @include mq("phone") {
+      height: 55px;
+    }
+
+    // .box-inner = &
+    &-title {
+      font-size: 20px;
+      color: $color-white;
+      background-color: rgba($color-black, 0.5);
+
+      @include mq("phone") {
+        font-size: 40px;
+      }
+
+      @include mq("tablet-land") {
+        font-size: 30px;
+      }
+    }
+  }
+}
