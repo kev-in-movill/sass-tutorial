@@ -1,0 +1,42 @@
+.btn {
+  font-size: 30px;
+  text-decoration: none;
+  opacity: 1;
+  transition: all 5s;
+  //   transition: font-size 5s, opacity 10s; // 모든 속성에 적용할 시 all, 특정 태그속성으로 지정가능
+
+  &:hover {
+    font-size: 50px;
+    text-decoration: underline;
+    opacity: 0.2;
+  }
+}
+
+// animation
+@keyframes anim1 {
+  0% {
+    opacity: 0.2;
+    transform: translate(
+      100px,
+      -30px
+    ); // translate: 위치를 바꾸는 속성, scale: 크기를 바꾸는 속성
+    // x: - 왼쪽, + 오른쪽, y: - 위쪽, + 아래쪽
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+#box1 {
+  animation-name: anim1;
+  animation-duration: 5s;
+  // animation 효과가 마지막까지 남아있게 하는 속성
+  animation-fill-mode: backwards; // forward: animation 끝나고 마지막 상태를 가지고 있게함
+  animation-iteration-count: 3;
+  animation-delay: 3s; // delay 속성이 있을 시 backwards 옵션 fill-mode 설정하여 어색함을 없앰
+}
