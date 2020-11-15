@@ -1,0 +1,36 @@
+footer {
+  color: $color-grey-light;
+  background-color: $color-blue-dark;
+  padding: 9rem 7rem 3rem 7rem;
+
+  @include clearFix();
+
+  #logo-text-footer {
+    width: 25%;
+    font-size: 4rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    float: left;
+  }
+
+  #copyright {
+    width: 75%;
+    font-size: 1.2rem;
+    float: left;
+
+    // 첫번째 엘리먼트
+    p:nth-child(1) {
+      margin-bottom: 2rem;
+      word-break: break-all; // 길이에 따른 줄바꿈 조절
+      text-align: justify; // 양쪽 가장 자리에 맞춤
+
+      column-count: 3; // 컬럼 나누기
+      column-gap: 3rem;
+      column-rule-style: dashed; // 컬럼 선 스타일
+      column-rule-width: 1px; // 컬럼 선 굵기
+      column-rule-color: #888;
+      column-width: 1rem;
+    }
+  }
+}
