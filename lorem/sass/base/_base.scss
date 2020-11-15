@@ -1,0 +1,18 @@
+// 구글폰트 -- 나눔고딕
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // padding 값이 넓이에 적용됨
+}
+
+html {
+  font-size: 62.5%; // 16px 의 62.5% = 10px = 1rem;
+}
+
+body {
+  padding: 3rem;
+  // font-family: "Lato", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+}

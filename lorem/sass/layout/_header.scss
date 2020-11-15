@@ -1,0 +1,60 @@
+header {
+  width: 100%s;
+  height: 90vh;
+  background-image: linear-gradient(
+      to right,
+      $color-primary 0%,
+      $color-secondary 100%
+    ),
+    url(../images/header-image.jpg); // 0%: 왼쪽, 100%: 오른쪽
+  background-blend-mode: multiply; // background 합성 모드
+  background-size: cover; // cover: 화면에 이미지를 채움, contain: 이미지를 다 보이게 함
+  position: relative;
+
+  #logo-text {
+    position: absolute;
+    left: 7rem;
+    top: 4rem;
+    font-size: 5.6rem; // 56px
+    text-transform: uppercase; // 텍스트 대문자 전환
+    font-family: "Lato", sans-serif; // sans-serif = 고딕
+    font-weight: 100;
+    color: $color-white;
+    letter-spacing: -0.1rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s; // 기간
+    animation-iteration-count: 5; // 반복횟수
+    animation-delay: 2s; // 시작 전 딜레이
+    animation-fill-mode: backwards; // keyframe 0% 지점에서 시작
+  }
+
+  #header-text {
+    position: absolute;
+    left: 7rem;
+    bottom: 23%;
+    color: $color-white;
+    letter-spacing: -0.1rem;
+    font-weight: 700;
+
+    &-main {
+      font-size: 7.2rem;
+      line-height: 7.2rem;
+
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards;
+    }
+
+    &-sub {
+      margin-top: 3rem;
+      font-size: 2.4rem;
+
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
+      animation-fill-mode: backwards;
+    }
+  }
+}
