@@ -1,7 +1,106 @@
 main {
+  @include clearFix();
+
   #section-about {
+    background-color: #ededed;
+    padding: 7rem 0 6.5rem 6rem;
+    width: 66.66666%;
+    min-height: 42rem;
+    float: left;
+
+    @include clearFix();
+
+    &-words {
+      width: 65%;
+      float: left;
+
+      p {
+        padding: 1.5rem 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-align: justify;
+      }
+    }
+
+    &-photo {
+      position: relative;
+      width: 35%;
+      float: left;
+
+      .photo {
+        position: absolute;
+        width: 18rem;
+        height: 12rem;
+        transition: all 0.5s;
+
+        &:hover {
+          transform: scale(1.1);
+          padding: 1rem;
+          border: 3px solid $color-primary;
+          z-index: 10;
+        }
+
+        &:nth-child(1) {
+          left: 1rem;
+          top: 3rem;
+        }
+
+        &:nth-child(2) {
+          left: 6rem;
+          top: 10rem;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
   }
 
   #section-etc {
+    width: 33.33334%;
+    float: left;
+
+    // 특정한 id 를 가진 엘리먼트를 선택함
+    [id^="etc-"] {
+      height: 14rem;
+    }
+
+    .etc {
+      &:nth-child(1) {
+        background-color: $color-blue-1;
+      }
+      &:nth-child(2) {
+        background-color: $color-blue-2;
+      }
+      &:nth-child(3) {
+        background-color: $color-blue-3;
+      }
+
+      .etc-icon {
+        padding-top: 3.5rem;
+        width: 30%;
+        text-align: center;
+        float: left;
+
+        i {
+          font-size: 6rem;
+        }
+      }
+
+      .etc-text {
+        width: 70%;
+        float: left;
+
+        p {
+          margin: 0.5rem 0;
+          padding-right: 3.5rem;
+          text-align: justify;
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
 }

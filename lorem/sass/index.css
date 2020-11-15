@@ -110,6 +110,18 @@ h3 {
   text-transform: uppercase;
 }
 
+.u-margin-right-small {
+  margin-right: 1rem;
+}
+
+.u-margin-right-medium {
+  margin-right: 2rem;
+}
+
+.u-margin-right-big {
+  margin-right: 3rem;
+}
+
 .btn-text {
   font-size: 1.6rem;
   font-weight: 700;
@@ -126,6 +138,77 @@ h3 {
   color: #fff;
   background-color: #1f9cfd;
   border-bottom: none;
+}
+
+.nav-checkbox {
+  display: none;
+}
+
+.nav-button {
+  background-color: #c4e3ff;
+  width: 7rem;
+  height: 6rem;
+  position: fixed;
+  top: 7rem;
+  right: 8rem;
+  z-index: 2000;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.nav-bg {
+  background-image: radial-gradient(#285a91, #1f9cfd);
+  width: 7rem;
+  height: 6rem;
+  position: fixed;
+  top: 7rem;
+  right: 8rem;
+  z-index: 1000;
+  border-radius: 2px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.nav-checkbox:checked ~ .nav-bg {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+
+.nav-icon {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.nav-icon::before {
+  top: -0.8rem;
+}
+
+.nav-icon::after {
+  top: 0.8rem;
+}
+
+.nav-icon::before, .nav-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-icon, .nav-icon::before, .nav-icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+}
+
+.nav-button:hover .nav-icon::before {
+  top: -1rem;
+}
+
+.nav-button:hover .nav-icon::after {
+  top: 1rem;
 }
 
 header {
@@ -193,6 +276,121 @@ header #header-text-sub {
           animation-delay: 1.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main #section-about {
+  background-color: #ededed;
+  padding: 7rem 0 6.5rem 6rem;
+  width: 66.66666%;
+  min-height: 42rem;
+  float: left;
+}
+
+main #section-about::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main #section-about-words {
+  width: 65%;
+  float: left;
+}
+
+main #section-about-words p {
+  padding: 1.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: justify;
+}
+
+main #section-about-photo {
+  position: relative;
+  width: 35%;
+  float: left;
+}
+
+main #section-about-photo .photo {
+  position: absolute;
+  width: 18rem;
+  height: 12rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main #section-about-photo .photo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding: 1rem;
+  border: 3px solid #285a91;
+  z-index: 10;
+}
+
+main #section-about-photo .photo:nth-child(1) {
+  left: 1rem;
+  top: 3rem;
+}
+
+main #section-about-photo .photo:nth-child(2) {
+  left: 6rem;
+  top: 10rem;
+}
+
+main #section-about-photo .photo img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5);
+}
+
+main #section-etc {
+  width: 33.33334%;
+  float: left;
+}
+
+main #section-etc [id^="etc-"] {
+  height: 14rem;
+}
+
+main #section-etc .etc:nth-child(1) {
+  background-color: #a8d8ff;
+}
+
+main #section-etc .etc:nth-child(2) {
+  background-color: #c1e1ff;
+}
+
+main #section-etc .etc:nth-child(3) {
+  background-color: #d6eaff;
+}
+
+main #section-etc .etc .etc-icon {
+  padding-top: 3.5rem;
+  width: 30%;
+  text-align: center;
+  float: left;
+}
+
+main #section-etc .etc .etc-icon i {
+  font-size: 6rem;
+}
+
+main #section-etc .etc .etc-text {
+  width: 70%;
+  float: left;
+}
+
+main #section-etc .etc .etc-text p {
+  margin: 0.5rem 0;
+  padding-right: 3.5rem;
+  text-align: justify;
+  font-size: 1.4rem;
 }
 
 footer {

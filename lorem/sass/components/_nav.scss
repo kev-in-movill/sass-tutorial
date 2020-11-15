@@ -1,0 +1,75 @@
+.nav {
+  &-checkbox {
+    display: none;
+  }
+
+  &-button {
+    background-color: #c4e3ff;
+    width: 7rem;
+    height: 6rem;
+    position: fixed;
+    top: 7rem;
+    right: 8rem;
+    z-index: 2000;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1rem 1rem rgba(#000, 0.1);
+    text-align: center;
+  }
+
+  &-bg {
+    background-image: radial-gradient($color-primary, $color-secondary);
+    width: 7rem;
+    height: 6rem;
+    position: fixed;
+    top: 7rem;
+    right: 8rem;
+    z-index: 1000;
+    border-radius: 2px;
+
+    transition: all 0.8s;
+  }
+
+  // checkbox 체크된 상태일 때 같은 자식인 .nav-bg 호출
+  &-checkbox:checked ~ &-bg {
+    transform: scale(80);
+  }
+
+  &-icon {
+    position: relative;
+    margin-top: 3rem;
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    // span 태그에도 속성이 그대로 내려감
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #333;
+      display: inline-block;
+    }
+  }
+
+  &-button:hover &-icon::before {
+    top: -1rem;
+  }
+
+  &-button:hover &-icon::after {
+    top: 1rem;
+  }
+}
